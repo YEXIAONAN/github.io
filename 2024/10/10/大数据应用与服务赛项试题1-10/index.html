@@ -1,0 +1,906 @@
+<!DOCTYPE html><html lang="Zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>大数据应用与服务赛项试题1-10 | 叶小楠的个人博客</title><meta name="keywords" content="MySQL,大数据应用与服务"><meta name="author" content="叶小楠"><meta name="copyright" content="叶小楠"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="大数据应用与服务赛项试题1-10"><meta name="application-name" content="大数据应用与服务赛项试题1-10"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="大数据应用与服务赛项试题1-10"><meta property="og:url" content="https://blog.yexiaonan.fun/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/index.html"><meta property="og:site_name" content="叶小楠的个人博客"><meta property="og:description" content="大数据应用与服务赛项试题01（1） 安装好MySQL后，使用mysql用户初始化和启动数据库；  1mysqld --initialize-insecure --user&amp;#x3D;mysql    （2） 使用root用户无密码登录MySQL，然后将root用 户的密码修改为123456，修改完成退出MyS"><meta property="og:locale" content="Zh-CN"><meta property="og:image" content="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=07760e5a-fb47-8c9f-b062-0fe64e6f0648"><meta property="article:author" content="叶小楠"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=07760e5a-fb47-8c9f-b062-0fe64e6f0648"><meta name="description" content="大数据应用与服务赛项试题01（1） 安装好MySQL后，使用mysql用户初始化和启动数据库；  1mysqld --initialize-insecure --user&amp;#x3D;mysql    （2） 使用root用户无密码登录MySQL，然后将root用 户的密码修改为123456，修改完成退出MyS"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.yexiaonan.fun/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":null},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 叶小楠","link":"链接: ","source":"来源: 叶小楠的个人博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '叶小楠的个人博客',
+  title: '大数据应用与服务赛项试题1-10',
+  postAI: '',
+  pageFillDescription: '大数据应用与服务赛项试题01, 大数据应用与服务赛项试题02, 大数据应用与服务赛项试题03, 大数据应用与服务赛项试题05, 大数据应用与服务赛项试题06, 大数据应用与服务赛项试题07, 大数据应用与服务赛项试题08, 大数据应用与服务赛项试题09, 大数据应用与服务赛项试题10大数据应用与服务赛项试题安装好后使用用户初始化和启动数据库使用用户无密码登录然后将用户的密码修改为修改完成退出重新登录验证密码是否修改成功更改数据库里的表里的项从改成即可实现用户远程登录设置完成刷新配置信息让其生效大数据应用与服务赛项试题根据临时密码进入数据库并修改本地密码为初始化使用命令去日志文件查看初始化的密码修改本地密码开启远程连接权限所有用户都可以使用进行登录连接子任务二导入相关表将本地目录下的数据文件导入对应数据库新建一个数据库使用新建数据库导入数据将本地目录下的数据文件导入对应数据库新建一个数据库使用新建数据库导入数据子任务三维护数据表结合已导入的两份数据对其中的数据进行如下查询和操作对数据库中的数据表进行修改修改字段为的记录的修改为内蒙古自治区内蒙古自治区对数据库中的数据表进行删除删除字段为的记录大数据应用与服务赛项试题子任务一数据库配置配置服务端数据库的远程连接初始化数据库系统将完整命令及初始化成功的截图复制粘贴至客户端桌面提交结果中对应的任务序号下配置用户允许任意连接将完整命令截图复制粘贴至客户端桌面提交结果中对应的任务序号下通过用户登录数据库系统查看库下的所有表将完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下输入命令以创建新的用户完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下授予新用户访问数据的权限完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下刷新权限完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下子任务二创建相关表根据以下数据字段在数据库中创建酒店表酒店表字段如下酒店编号酒店名称城市省份星级房间数评分评论数根据以下数据字段在数据库中创建评论表评论表字段如下字段类型中文含义备注评论编号酒店名称评论人评分评论时间评论内容将这两个建表语句分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下子任务三维护数据表根据已给到的文件将这两份数据导入任意自己创建的数据库中并对其中的数据进行如下操作在表中将为的评分改为在表中统计各商圈的酒店总数将这两个语句分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下大数据应用与服务赛项试题子任务一数据库配置配置服务端数据库的远程连接初始化数据库系统将完整命令及初始化成功的截图复制粘贴至客户端桌面提交结果中对应的任务序号下配置用户允许任意连接将完整命令截图复制粘贴至客户端桌面提交结果中对应的任务序号下通过用户登录数据库系统查看库下的所有表将完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下输入命令以创建新的用户完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下授予新用户访问数据的权限完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下刷新权限完整命令及执行命令后的结果的截图复制粘贴至客户端桌面提交结果中对应的任务序号下子任务二创建相关表根据以下数据字段在数据库中创建酒店表酒店表字段如下字段类型中文含义备注酒店编号酒店名称城市省份星级房间数评分评论数根据以下数据字段在数据库中创建评论表评论表字段如下字段类型中文含义备注评论编号酒店名称评论人评分评论时间评论内容将这两个建表语句分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下子任务三维护数据表根据已给到的文件将这两份数据导入任意自己创建的数据库中并对其中的数据进行如下操作在表中删除为的酒店数据在表中将为的评分改为将这两个语句分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下大数据应用与服务赛项试题为本地主机数据库创建一个名为的用户密码为将完整命令及结果截图粘贴到对应答题报告中查看用户确认有刚才创建的用户将完整命令及结果截图粘贴到对应答题报告中将用户名修改为将完整命令及结果截图粘贴到对应答题报告中授予用户对数据库中表的查询插入删除权限将完整命令及结果截图粘贴到对应答题报告中数据库中已创建好数据库如果不存在则需要自己建库并导入数据提供的几个是数据源文件使用新用户登录数据库查看是否有数据库并查看数据库下有哪些表将完整命令及结果截图粘贴到对应答题报告中删除的用户并确认是否已经删除用户将完整命令及结果截图粘贴到对应答题报告中在数据库的库中创建一个名为的数据表数据库引擎为默认字符集为将完整命令及运行结果截图粘贴到对应答题报告中包含的字段如下列名数据类型说明城市主键自增非空城市名称省份名称气候条件使用命令修改表中列的列名为将完整命令及结果截图粘贴到对应答题报告中使用命令给表增加一个字段代表邮编字段类型应符合实际意义将完整命令及结果截图粘贴到对应答题报告中使用语句给表中插入一条数据数据的具体信息如下城市为城市名称为阆中市省份名称为四川省气候条件为亚热带季风气候邮编为将完整语句及运行结果截图粘贴到对应答题报告中使用语句批量给表中插入三条数据将完整语句及运行结果截图粘贴到对应答题报告中数据的具体信息如下城市城市名称省份名称气候条件邮编江油市四川省亚热带季风性湿润气候灯塔市辽宁省北温带大陆性气候玉环市浙江省暖温带大陆性季风气候使用语句修改表中城市为的城市信息将气候修改为亚热带海洋性季风气候将邮编修改为将完整语句及运行结果截图粘贴到对应答题报告中使用命令查看表中第至第条数据查询结果只显示第至第条数据将完整语句和运行结果的后条数据以及总数据行数截图粘贴到对应答题报告中使用语句分别查询四川省广东省浙江省下面有哪些城市输出省份省份名称城市城市名称邮编城市等级气候条件将完整语句和各省份相关城市查询结果的后条数据以及总数据行数截图粘贴到对应答题报告中使用语句查询表筛选出哪些城市在年的月度温差大于等于度的平均最高气温平均最低气温输出城市城市名称日期平均最高气温平均最低气温将完整语句和运行结果的后条数据以及总数据行数截图粘贴到对应答题报告中使用语句查询表中各个城市每年的最高温度和最低温度分别是多少度输出城市城市名称日期格式为年最高温度最低温度将完整语句和运行结果的后条数据以及总数据行数截图粘贴到对应答题报告中大数据应用与服务赛项试题为本地主机数据库创建一个名为的用户密码为将完整命令及结果截图粘贴到对应答题报告中将用户名修改为将完整命令及结果截图粘贴到对应答题报告中使用新用户登录数据库将完整命令及结果截图粘贴到对应答题报告中授予用户对数据库中所有表的所有权限将完整命令及结果截图粘贴到对应答题报告中数据库中已创建好数据库如果不存在则需要自己建库并导入数据提供的几个是数据源文件子任务二数据表与数据管理本环节需要使用数据库系统完成关于天气信息的建库建表数据的插入数据表的管理等操作具体要求如下在数据库中创建名字为的数据库将完整命令及运行结果截图粘贴到对应答题报告中在数据库中删除名字为数据库将完整命令及运行结果截图粘贴到对应答题报告中在数据库的库中创建一个名为的数据表包含的字段见下面的数据表说明要求所有字段非空数据引擎为默认字符集为将完整命令及运行结果截图粘贴到对应答题报告中使用命令修改表中字段的类型和长度为将完整命令及结果截图粘贴到对应答题报告中使用命令删除表中的字段将完整命令及结果截图粘贴到对应答题报告中使用命令删除表将完整命令及结果截图粘贴到对应答题报告中子任务三维护数据表本环节需要使用数据库系统内置的数据分析语法按照不同维度对天气相关数据进行数据分析等操作具体要求如下在表中使用语句查询鞍山城市年晴天有多少天天气为晴则为晴天将完整语句及运行结果截图粘贴到对应答题报告中在表中使用语句查询重庆每年极端最高温度超过的天气分别有多少天将完整语句及运行结果截图粘贴到对应答题报告中在表中使用语句统计年极端最高温度与极端最低温度超过的城市分别有哪些将完整语句和运行结果的后条数据以及总数据行数截图粘贴到对应答题报告中统计黑龙江省每年下雪天有多少天每天的天气中包含雪即为下雪天将完整语句及运行结果截图粘贴到对应答题报告中统计天气晴朗天数最多的前三个省份信息天气包含晴则为天气晴朗将完整语句及运行结果截图粘贴到对应答题报告中在表中使用语句统计年月日这天中温差超过的城市有哪些将完整语句及运行结果截图粘贴到对应答题报告中统计每个省份中属于亚热带季风气候的城市数量查询结果按照城市数量从高到低进行排序将完整语句及运行结果截图粘贴到对应答题报告中大数据应用与服务赛项试题二任务二数据库配置维护子任务一创建数据库及相关数据表在数据库中创建数据库并在数据库中分别创建及共个数据表各个数据表的表字段格式如下将创建数据库及的建表结果图分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下子任务二添加数据记录分别为及数据表添加数据记录各个数据表所需要添加的数据记录如下子任务三数据表查询将学院名称为电子的所有学生其学号姓名课程名称及成绩显示出来将选修了课程号为和的所有学生其姓名课程名称及成绩显示出来将姓名末尾带有华字的学生其姓名课程名称及成绩显示出来将上述查询语句及查询结果图分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下大数据应用与服务赛项试题二任务二数据库配置维护子任务一创建数据库及相关数据表在数据库中创建数据库并在数据库中分别创建及共个数据表各个数据表的表字段格式如下将创建数据库及的建表结果图分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下子任务二添加数据记录分别为及数据表添加数据记录各个数据表需要添加的数据记录如下将及的数据添加结果图分别截图复制粘贴至客户端桌面提交结果子任务三数据表查询将班级名称为计算机班的所有学生其学号姓名班级修过的课程名称及对应的成绩显示出来将修了课程学分等于的所有学生其学号姓名课程名称学分及对应的成绩显示出来将课程成绩在至之间的学生其学号姓名班级课程名称及对应的成绩显示出来将上述查询语句及查询结果图分别截图复制粘贴至客户端桌面提交结果中对应的任务序号下大数据应用与服务赛项试题子任务一数据库配置在主机上安装启动服务根据临时密码进入数据库并修改本地密码为开启远程连接权限所有用户都可以使用进行登录连接子任务二创建相关表结合数据特征创建数据表将本地目录下的数据文件导入对应数据库表子任务三维护数据表结合数据进行如下查询和操作使用语句获取查询语句的执行计划为表字段案件副类别创建索引对比索引查询情况大数据应用与服务赛项试题二任务二数据库配置维护子任务一数据库配置配置服务端数据库的远程连接初始化数据库系统将完整命令及初始化成功的截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下配置用户允许任意连接将完整命令截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下通过用户登录数据库系统查看库下的所有表将完整命令及执行命令后的结果的截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下输入命令以创建新的用户完整命令及执行命令后的结果的截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下授予新用户访问数据的权限完整命令及执行命令后的结果的截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下刷新权限完整命令及执行命令后的结果的截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下根据以下数据字段在数据库中创建酒店表根据以下数据字段在数据库中创建评论表评论表字段如下将这两个建表语句分别截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下子任务三维护数据表根据已给到的文件将这两份数据导入任意自己创建的数据库中并对其中的数据进行如下操作在表中删除为的酒店数据在表中将为的评分改为将这两个语句分别截图复制粘贴至客户端桌面任务提交结果中对应的任务序号下',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-10 17:03:42',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://pxy.shenyi.cyou/2024/10/07/image5.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">叶小楠的个人博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 其他</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友情链接</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CCF%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%A1%8C%E4%B8%9A%E8%B5%9B/" style="font-size: 1.05rem;">CCF大数据行业赛<sup>1</sup></a><a href="/tags/Echarts-%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.05rem;">Echarts-可视化<sup>1</sup></a><a href="/tags/Flink/" style="font-size: 1.05rem;">Flink<sup>1</sup></a><a href="/tags/HBase/" style="font-size: 1.05rem;">HBase<sup>1</sup></a><a href="/tags/HDFS/" style="font-size: 1.05rem;">HDFS<sup>1</sup></a><a href="/tags/Hadoop/" style="font-size: 1.05rem;">Hadoop<sup>3</sup></a><a href="/tags/Hive/" style="font-size: 1.05rem;">Hive<sup>1</sup></a><a href="/tags/JDK/" style="font-size: 1.05rem;">JDK<sup>1</sup></a><a href="/tags/Kafka/" style="font-size: 1.05rem;">Kafka<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>1</sup></a><a href="/tags/Markdown/" style="font-size: 1.05rem;">Markdown<sup>2</sup></a><a href="/tags/MySQL/" style="font-size: 1.05rem;">MySQL<sup>4</sup></a><a href="/tags/Pandas/" style="font-size: 1.05rem;">Pandas<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>2</sup></a><a href="/tags/Python-Request%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 1.05rem;">Python-Request数据爬取<sup>1</sup></a><a href="/tags/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 1.05rem;">Python-scrapy数据爬取<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 1.05rem;">SQL<sup>1</sup></a><a href="/tags/Spark/" style="font-size: 1.05rem;">Spark<sup>2</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%961/" style="font-size: 1.05rem;">Spark数据抽取1<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%962/" style="font-size: 1.05rem;">Spark数据抽取2<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%963/" style="font-size: 1.05rem;">Spark数据抽取3<sup>1</sup></a><a href="/tags/Sqoop/" style="font-size: 1.05rem;">Sqoop<sup>1</sup></a><a href="/tags/Zookeeper/" style="font-size: 1.05rem;">Zookeeper<sup>1</sup></a><a href="/tags/Zoomit%E8%AF%AD%E6%B3%95/" style="font-size: 1.05rem;">Zoomit语法<sup>1</sup></a><a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.05rem;">可视化<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%83%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第七套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第三套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%BA%94%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第五套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AB%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第八套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AD%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第六套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%8D%81%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第十套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%9B%9B%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第四套题<sup>1</sup></a><a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1/" style="font-size: 1.05rem;">大数据应用与服务<sup>4</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.05rem;">网络安全<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">22</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/MySQL/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>MySQL</span></a><a class="article-meta__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>大数据应用与服务</span></a></span></div></div><h1 class="post-title" itemprop="name headline">大数据应用与服务赛项试题1-10</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-10-10T07:54:36.000Z" title="发表于 2024-10-10 15:54:36">2024-10-10</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-10-10T09:03:42.528Z" title="更新于 2024-10-10 17:03:42">2024-10-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为南宁"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>南宁</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=07760e5a-fb47-8c9f-b062-0fe64e6f0648"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://blog.yexiaonan.fun/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/"><header><a href="/tags/MySQL/" tabindex="-1" itemprop="url">MySQL</a><a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1/" tabindex="-1" itemprop="url">大数据应用与服务</a><h1 id="CrawlerTitle" itemprop="name headline">大数据应用与服务赛项试题1-10</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">叶小楠</span><time itemprop="dateCreated datePublished" datetime="2024-10-10T07:54:36.000Z" title="发表于 2024-10-10 15:54:36">2024-10-10</time><time itemprop="dateCreated datePublished" datetime="2024-10-10T09:03:42.528Z" title="更新于 2024-10-10 17:03:42">2024-10-10</time></header><h2 id="大数据应用与服务赛项试题01"><a href="#大数据应用与服务赛项试题01" class="headerlink" title="大数据应用与服务赛项试题01"></a>大数据应用与服务赛项试题01</h2><p>（1） 安装好MySQL后，使用mysql用户初始化和启动数据库；</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize-insecure --user=mysql</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2） 使用root用户无密码登录MySQL，然后将root用 户的密码修改为123456，修改完成退出MySQL，重新登录验 证密码是否修改成功；</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified by &#x27;123456&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（3）更 改 “ mysql ” 数 据 库 里 的 user 表 里 的 host 项 ， 从 localhost 改成%即可实现用户远程登录；设置完成刷新配置 信息，让其生效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update mysql.user set Host = &#x27;%&#x27; where User = &#x27;root&#x27; and Host = &#x27;localhost&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="大数据应用与服务赛项试题02"><a href="#大数据应用与服务赛项试题02" class="headerlink" title="大数据应用与服务赛项试题02"></a>大数据应用与服务赛项试题02</h2><p>（1）根据临时密码进入数据库，并修改本地密码为“123456”；</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 初始化MySQL使用命令</span><br><span class="line">mysqld --initialize</span><br><span class="line"></span><br><span class="line"># 去MySQL日志文件查看初始化的密码</span><br><span class="line">cat /var/log/mysql.log | grep password;</span><br><span class="line"></span><br><span class="line"># 修改本地密码</span><br><span class="line">alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified by &#x27;123456&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）开启 MySQL 远程连接权限，所有 root 用户都可以 使用 123456 进行登录连接。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update mysql.user set Host = &#x27;%&#x27; where User = &#x27;root&#x27; and Host = &#x27;localhost&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2．子任务二：导入相关表</p>
+<p>（1）将 本 地 &#x2F;root&#x2F;eduhq&#x2F;equipment&#x2F; 目 录 下 的 数 据 文 件 root_sl_src.sql 导入 MySQL 对应数据库 root_sl_src；</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 新建一个数据库root_sl_src</span><br><span class="line">create database root_sl_src;</span><br><span class="line"></span><br><span class="line"># 使用新建数据库</span><br><span class="line">use root_sl_src;</span><br><span class="line"></span><br><span class="line"># 导入数据</span><br><span class="line">source  /root/eduhq/equipment/root_sl_src.sql;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）将 本 地 &#x2F;root&#x2F;eduhq&#x2F;equipment&#x2F; 目 录 下 的 数 据 文 件 root_sl_ugoogds_src.sql 导 入 MySQL 对 应 数 据 库 root_sl_ugoogds_src。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 新建一个数据库root_sl_src</span><br><span class="line">create database root_sl_ugoogds_src;</span><br><span class="line"></span><br><span class="line"># 使用新建数据库</span><br><span class="line">use root_sl_ugoogds_src;</span><br><span class="line"></span><br><span class="line"># 导入数据</span><br><span class="line">source  /root/eduhq/equipment/root_sl_ugoogds_src;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3．子任务三：维护数据表</p>
+<p>结合已导入的两份 sql 数据，对其中的数据进行如下查 询和操作。</p>
+<p>（1）对‘root_sl_src’数据库中的‘province’数据 表 进 行 修 改 ， 修 改 字 段 province_id 为 24 的 记 录 的 province_name，修改为‘内蒙古自治区’；</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update root_sl_src.province set province_name = &#x27;内蒙古自治区&#x27; where province_id = &#x27;24&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）对‘root_sl_src’数据库中的‘city’数据表进 行删除，删除字段 city_id 为 142 的记录。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from city where city_id = 124;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="大数据应用与服务赛项试题03"><a href="#大数据应用与服务赛项试题03" class="headerlink" title="大数据应用与服务赛项试题03"></a>大数据应用与服务赛项试题03</h2><ol>
+<li>子任务一：数据库配置</li>
+</ol>
+<p>（1）配置服务端 MySQL 数据库的远程连接。</p>
+<p>（2）初始化 MySQL 数据库系统，将完整命令及初始化 成功的截图复制粘贴至客户端桌面【Release\提交结果.docx】 中对应的任务序号下。</p>
+<p>（3）配置 root 用户允许任意 ip 连接，将完整命令截图 复制粘贴至客户端桌面【Release\ 提交结果.docx】中对应的任 务序号下。</p>
+<p>（4）通过 root 用户登录 MySQL 数据库系统，查看 mysql 库下的所有表，将完整命令及执行命令后的结果的截图复制 粘贴至客户端桌面【Release\提交结果.docx】中对应的任务序 号下</p>
+<p>（2）输入命令以创建新的用户。完整命令及执行命令后 的 结 果 的 截 图 复 制 粘 贴 至 客 户 端 桌 面 【 Release\ 提 交 结 果.docx】中对应的任务序号下。</p>
+<p>（3）授予新用户访问数据的权限。完整命令及执行命令 后 的 结 果 的 截 图 复 制 粘 贴 至 客 户 端 桌 面 【 Release\ 提 交 结 果.docx】中对应的任务序号下。</p>
+<p>（4）刷新权限。完整命令及执行命令后的结果的截图复 制粘贴至客户端桌面【Release\提交结果.docx】中对应的任务 序号下。</p>
+<ol start="2">
+<li>子任务二：创建相关表</li>
+</ol>
+<p>（1）根据以下数据字段在 MySQL 数据库中创建酒店表 （hotel）。酒店表字段如下：</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>int</th>
+<th>酒店编号</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hotel_name</td>
+<td>varchar</td>
+<td>酒店名称</td>
+<td></td>
+</tr>
+<tr>
+<td>City</td>
+<td>varchar</td>
+<td>城市</td>
+<td></td>
+</tr>
+<tr>
+<td>Province</td>
+<td>varchar</td>
+<td>省份</td>
+<td></td>
+</tr>
+<tr>
+<td>Level</td>
+<td>varchar</td>
+<td>星级</td>
+<td></td>
+</tr>
+<tr>
+<td>room_num</td>
+<td>int</td>
+<td>房间数</td>
+<td></td>
+</tr>
+<tr>
+<td>Score</td>
+<td>double</td>
+<td>评分</td>
+<td></td>
+</tr>
+<tr>
+<td>shopping</td>
+<td>varchar</td>
+<td>评论数</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps111.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps112.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps113.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps114.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps115.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps116.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps117.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps118.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps119.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps120.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps121.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps122.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps123.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps124.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps125.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps126.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps127.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps128.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps129.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps130.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps131.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps132.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps133.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps134.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps135.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps136.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps137.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps138.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps139.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps140.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps141.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps142.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps143.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps144.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps145.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps146.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps147.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps148.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps149.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps150.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps151.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps152.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps153.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps154.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps155.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps156.png" alt="img"> </p>
+<p>（2）根据以下数据字段在 MySQL 数据库中创建评论表 （comment）。评论表字段如下：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>中文含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Id</td>
+<td>int</td>
+<td>评论编号</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>varchar</td>
+<td>酒店名称</td>
+<td></td>
+</tr>
+<tr>
+<td>Commentator</td>
+<td>varchar</td>
+<td>评论人</td>
+<td></td>
+</tr>
+<tr>
+<td>Score</td>
+<td>double</td>
+<td>评分</td>
+<td></td>
+</tr>
+<tr>
+<td>comment_time</td>
+<td>datetime</td>
+<td>评论时间</td>
+<td></td>
+</tr>
+<tr>
+<td>Content</td>
+<td>varchar</td>
+<td>评论内容</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>将这两个 SQL 建表语句分别截图复制粘贴至客户端桌 面【Release\提交结果.docx】中对应的任务序号下。</p>
+<ol start="3">
+<li>子任务三：维护数据表</li>
+</ol>
+<p>根据已给到的 sql 文件将这两份数据导入任意自己创建 的数据库中，并对其中的数据进行如下操作：</p>
+<p>在 comment_all 表中将 id 为 30 的评分改为 5;</p>
+<p>在 hotel_all 表中统计各商圈的酒店总数。</p>
+<p>将 这 两 个 SQL 语 句 分 别 截 图 复 制 粘 贴 至 客 户 端 桌 面 【Release\提交结果.docx】中对应的任务序号下</p>
+<p>大数据应用与服务赛项试题04</p>
+<p>1.子任务一：数据库配置</p>
+<p>（1）配置服务端MySQL数据库的远程连接。</p>
+<p>（2）初始化MySQL数据库系统，将完整命令及初始化 成功的截图复制粘贴至客户端桌面【Release\提交结果.docx 】中对应的任务序号下。</p>
+<p>（1）配置root用户允许任意ip连接，将完整命令截图复 制粘贴至客户端桌面【Release\提交结果.docx】中对应的任 务序号下</p>
+<p>（1）通过root用户登录MySQL数据库系统，查看mysql 库下的所有表，将完整命令及执行命令后的结果的截图复 制粘贴至客户端桌面【Release\提交结果.docx】中对应的任 务序号下。</p>
+<p>（2）输入命令以创建新的用户。完整命令及执行命令 后的结果的截图复制粘贴至客户端桌面【Release\提交结果 .docx】中对应的任务序号下。</p>
+<p>（3）授予新用户访问数据的权限。完整命令及执行命 令后的结果的截图复制粘贴至客户端桌面【Release\提交结 果.docx】中对应的任务序号下。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps157.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps158.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps159.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps160.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps161.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps162.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps163.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps164.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps165.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps166.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps167.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps168.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps169.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps170.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps171.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps172.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps173.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps174.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps175.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps176.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps177.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps178.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps179.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps180.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps181.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps182.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps183.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps184.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps185.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps186.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps187.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps188.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps189.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps190.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps191.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps192.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps193.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps194.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps195.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps196.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps197.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps198.png" alt="img"> </p>
+<p>（7）刷新权限。完整命令及执行命令后的结果的截图 复制粘贴至客户端桌面【Release\ 提交结果.docx】中对应的 任务序号下。</p>
+<p>2.子任务二：创建相关表</p>
+<p>（1）根据以下数据字段在MySQL 数据库中创建酒店表 （hotel）。酒店表字段如下：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>中文含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>int</td>
+<td>酒店编号</td>
+<td></td>
+</tr>
+<tr>
+<td>hotel_name</td>
+<td>varchar</td>
+<td>酒店名称</td>
+<td></td>
+</tr>
+<tr>
+<td>city</td>
+<td>varchar</td>
+<td>城市</td>
+<td></td>
+</tr>
+<tr>
+<td>province</td>
+<td>varchar</td>
+<td>省份</td>
+<td></td>
+</tr>
+<tr>
+<td>level</td>
+<td>varchar</td>
+<td>星级</td>
+<td></td>
+</tr>
+<tr>
+<td>room_num</td>
+<td>int</td>
+<td>房间数</td>
+<td></td>
+</tr>
+<tr>
+<td>score</td>
+<td>double</td>
+<td>评分</td>
+<td></td>
+</tr>
+<tr>
+<td>shopping</td>
+<td>varchar</td>
+<td>评论数</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>（2）根据以下数据字段在MySQL 数据库中创建评论表 （comment）。评论表字段如下：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>中文含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>int</td>
+<td>评论编号</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>varchar</td>
+<td>酒店名称</td>
+<td></td>
+</tr>
+<tr>
+<td>commentator</td>
+<td>varchar</td>
+<td>评论人</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps199.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps200.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps201.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps202.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps203.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps204.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps205.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps206.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps207.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps208.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps209.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps210.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps211.png" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps212.png" alt="img"> </p>
+<table>
+<thead>
+<tr>
+<th>score</th>
+<th>double</th>
+<th>评分</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>comment_time</td>
+<td>datetime</td>
+<td>评论时间</td>
+<td></td>
+</tr>
+<tr>
+<td>content</td>
+<td>varchar</td>
+<td>评论内容</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>将这两个SQL建表语句分别截图复制粘贴至客户端桌面 【Release\提交结果.docx】中对应的任务序号下。</p>
+<p>3.子任务三：维护数据表</p>
+<p>根据已给到的sql 文件将这两份数据导入任意自己创建 的数据库中，并对其中的数据进行如下操作：</p>
+<p>（1）在hotel_all 表中删除id为25的酒店数据;</p>
+<p>（2）在comment_all表中将id为30的评分改为5。</p>
+<p>将这两个SQL语句分别截图复制粘贴至客户端桌面【 Release\提交结果.docx】中对应的任务序号下。</p>
+<h2 id="大数据应用与服务赛项试题05"><a href="#大数据应用与服务赛项试题05" class="headerlink" title="大数据应用与服务赛项试题05"></a>大数据应用与服务赛项试题05</h2><p>（1）为本地主机数据库创建一个名为 staff 的用户， 密码为 staff123456 ，将完整命令及结果截图粘贴到对应答 题报告中</p>
+<p>（2）查看用户，确认有刚才创建的 staff 用户，将完 整命令及结果截图粘贴到对应答题报告中；</p>
+<p>（3）将用户名 staff 修改为 newstaff，将完整命令及 结果截图粘贴到对应答题报告中；</p>
+<p>（4）授 予 用 户 newstaff 对 WeatherDB 数 据 库 中 weather_month 表的查询、插入、删除权限，将完整命令及 结果截图粘贴到对应答题报告中（MySQL 数据库中已创建好 WeatherDB 数据库，如果不存在则需要自己建库并导入数据， 提供的几个 sql 是数据源文件）；</p>
+<p>（5）使用新用户 newstaff 登录 MySQL 数据库，查看是 否有 WeatherDB 数据库，并查看 WeatherDB 数据库下有哪些 表，将完整命令及结果截图粘贴到对应答题报告中；</p>
+<p>(6) 删 除 newstaff 的 用 户 ， 并 确 认 是 否 已 经 删 除 newstaff 用户，将完整命令及结果截图粘贴到对应答题报告 中；</p>
+<p>（1）在 MySQL 数据库的 WeatherDB 库中，创建一个名 为 province_city 的数据表，数据库引擎为 InnoDB，默认字 符集为 utf8。将完整命令及运行结果截图粘贴到对应答题报 告中；包含的字段如下：</p>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>city_id</td>
+<td>int</td>
+<td>城市 ID：主键，自增，非空</td>
+</tr>
+<tr>
+<td>city_name</td>
+<td>varchar</td>
+<td>城市名称</td>
+</tr>
+<tr>
+<td>province_name</td>
+<td>varchar</td>
+<td>省份名称</td>
+</tr>
+<tr>
+<td>climate</td>
+<td>varchar</td>
+<td>气候条件</td>
+</tr>
+</tbody></table>
+<p>（2）使用 SQL 命令修改 province_city 表中 climate 列的列名为 climate_new，将完整命令及结果截图粘贴到对 应答题报告中；</p>
+<p>（3）使用 SQL 命令给 province_city 表增加一个字段 zip_code （ 代 表邮 编 ），字段类 型 应 符 合 实 际 意 义 ， 将 完 整 命令及结果截图粘贴到对应答题报告中；</p>
+<p>（4）使用 SQL 语句给 province_city 表中插入一条数 据，数据的具体信息如下：城市 ID 为 10001、城市名称为阆 中市、省份名称为四川省、气候条件为亚热带季风气候、邮 编为 637400。将完整 SQL 语句及运行结果截图粘贴到对应答 题报告中。</p>
+<p>（5）使用 SQL 语句批量给 province_city 表中插入三 条数据，将完整 SQL 语句及运行结果截图粘贴到对应答题报 告中。数据的具体信息如下：</p>
+<table>
+<thead>
+<tr>
+<th>城市 ID</th>
+<th>城市名称</th>
+<th>省份名称</th>
+<th>气候条件</th>
+<th>邮编</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10002</td>
+<td>江油市</td>
+<td>四川省</td>
+<td>亚热带季风性湿润气候</td>
+<td>621700</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>灯塔市</td>
+<td>辽宁省</td>
+<td>北温带大陆性气候</td>
+<td>111300</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>玉环市</td>
+<td>浙江省</td>
+<td>暖温带大陆性季风气候</td>
+<td>317610</td>
+</tr>
+</tbody></table>
+<p>（5）使用 SQL 语句修改 province_city 表中城市 ID 为 10004 的城市信息，将气候修改为亚热带海洋性季风气候， 将邮编修改为 317600。将完整 SQL 语句及运行结果截图粘贴 到对应答题报告中；</p>
+<p>（1）使用 SQL 命令查看 weather_month 表中第 20000 至第 20100 条数据（查询结果只显示第 20000 至第 20100 条 数据），将完整 SQL 语句和运行结果的后 5 条数据以及总数据行数截图粘贴到对应答题报告中；</p>
+<p>（2）使用 SQL 语句分别查询四川省、广东省、浙江省 下面有哪些城市，输出省份 id、省份名称、城市 id、城市 名称、邮编、城市等级、气候条件。将完整 SQL 语句和各省 份相关城市查询结果的后 5 条数据以及总数据行数截图粘贴 到对应答题报告中；</p>
+<p>（3）使用 SQL 语句查询 weather_month 表，筛选出哪 些城市在 2018 年的月度温差大于等于 5 度的（平均最高气 温-平均最低气温），输出城市 id、城市名称、日期、平均最 高气温、平均最低气温。将完整 SQL 语句和运行结果的后 5 条数据以及总数据行数截图粘贴到对应答题报告中；</p>
+<p>（4）使用 SQL 语句查询 weather_day 表中各个城市每 年的最高温度和最低温度分别是多少度，输出城市 id、城市 名称、日期（格式为年）、最高温度、最低温度。将完整 SQL 语句和运行结果的后 5 条数据以及总数据行数截图粘贴到对 应答题报告中。</p>
+<h2 id="大数据应用与服务赛项试题06"><a href="#大数据应用与服务赛项试题06" class="headerlink" title="大数据应用与服务赛项试题06"></a>大数据应用与服务赛项试题06</h2><p>（1）为本地主机数据库创建一个名为 user01 的用户， 密码为 123321，将完整命令及结果截图粘贴到对应答题报 告中； </p>
+<p>（2）将用户名 user01 修改为 user1001，将完整命令及结果截图粘贴到对应答题报告中； </p>
+<p>（3）使用新用户 user1001 登录 MySQL 数据库，将完整命令及结果截图粘贴到对应答题报告中； </p>
+<p>（5）授予用户 user1001 对 WeatherDB 数据库中所有表的所有权限，将完整命令及结果截图粘贴到对应答题报告中（MySQL 数据库中已创建好 WeatherDB 数据库，如果不存在则需要自己建库并导入数据，提供的几个 sql 是数据源文件。）； </p>
+<p>2.子任务二：数据表与数据管理 </p>
+<p>本环节需要使用 MySQL 数据库系统完成关于天气信息的建库、建表、数据的插入、数据表的管理等操作。具体要求如下： </p>
+<p>（1）在 MySQL 数据库中创建名字为 WeatherTestDB的数据库，将完整命令及运行结果截图粘贴到对应答题报告中； </p>
+<p>（2）在 MySQL 数据库中删除名字为 WeatherTestDB数据库，将完整命令及运行结果截图粘贴到对应答题报告中； </p>
+<p>（3）在 MySQL 数据库的 WeatherDB 库中，创建一个 名为 weather_base_info_table 的数据表，包含的字段见下 面的数据表说明，要求所有字段非空，数据引擎为 InnoDB，默认字符集为 utf8。将完整命令及运行结果截图粘贴到对应答题报告中； </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps213.jpg" alt="img"> </p>
+<p>（4）使用 SQL 命令修改 weather_base_info_table 表中 city_id 字段的类型和长度为 varchar(255)，将完整命令及结果截图粘贴到对应答题报告中；</p>
+<p>（5）使用 SQL 命令删除 weather_base_info_table 表中的 city_id 字段，将完整命令及结果截图粘贴到对应答题报告中； </p>
+<p>（6）使用 SQL 命令删除 weather_base_info_table 表，将完整命令及结果截图粘贴到对应答题报告中； </p>
+<p>3.子任务三：维护数据表 </p>
+<p>本环节需要使用 MySQL 数据库系统内置的数据分析语法 </p>
+<p>按照不同维度对天气相关数据进行数据分析等操作，具体要 </p>
+<p>求如下： </p>
+<p>（1）在 weather_day 表中使用 SQL 语句查询鞍山城市 2022 年晴天有多少天（天气为晴则为晴天），将完整 SQL语句及运行结果截图粘贴到对应答题报告中； </p>
+<p>（2）在 weather_month 表中使用 SQL 语句查询重庆每年极端最高温度超过 40℃的天气分别有多少天，将完整SQL 语句及运行结果截图粘贴到对应答题报告中； </p>
+<p>（3）在 weather_month 表中使用 SQL 语句统计 2022年极端最高温度与极端最低温度超过 40℃ 的城市分别有哪些，将完整 SQL 语句和运行结果的后 5 条数据以及总数据行数截图粘贴到对应答题报告中； </p>
+<p>（4）统计黑龙江省每年下雪天有多少天（每天的天气 中包含雪即为下雪天）, 将完整 SQL 语句及运行结果截图粘 贴到对应答题报告中； </p>
+<p>（5）统计天气晴朗天数最多的前三个省份信息（天气包含晴则为天气晴朗），将完整 SQL 语句及运行结果截图粘贴到对应答题报告中； </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps214.jpg" alt="img"></p>
+<p>（6)在 weather_month 表中使用 SQL 语句统计 2022年 4 月 01 日这天中温差超过 15℃的城市有哪些，将完整 SQL语句及运行结果截图粘贴到对应答题报告中； </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps215.jpg" alt="img"></p>
+<p>（7)统计每个省份中属于亚热带季风气候的城市数量，查询结果按照城市数量从高到低进行排序，将完整 SQL 语句及运行结果截图粘贴到对应答题报告中； </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps216.jpg" alt="img"> </p>
+<h2 id="大数据应用与服务赛项试题07"><a href="#大数据应用与服务赛项试题07" class="headerlink" title="大数据应用与服务赛项试题07"></a>大数据应用与服务赛项试题07</h2><p>（二）任务二：数据库配置维护 </p>
+<p>1.子任务一：创建数据库及相关数据表 </p>
+<p>在 MySQL 数据库中创建“test”数据库，并在“test” 数据库中分别创建“stu”、“course”及“score”共 3 个数 据表。各个数据表的表字段格式如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps217.jpg" alt="img"> </p>
+<p>将创建“test”数据库、“stu”、“course”及“score” 的 建 表 结 果 图 分 别 截 图 复 制 粘 贴 至 客 户 端 桌 面 【M1-T2-SUBT1-提交结果 1.docx】中对应的任务序号下。 </p>
+<p>2.子任务二：添加数据记录 </p>
+<p>分别为“stu”、“course”及“score”数据表添加数据 记录。各个数据表所需要添加的数据记录如下</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps218.jpg" alt="img"> </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps219.jpg" alt="img"> </p>
+<p>3.子任务三：数据表查询 </p>
+<p>（1）将学院名称为“电子”的所有学生其“学号”、“姓名”、“课程名称”及“成绩”显示出来; </p>
+<p>（2）将选修了课程号为“KCJG01”和“KCDZ02”的所有学生其“姓名”、“课程名称”及“成绩”显示出来； </p>
+<p>（3）将姓名末尾带有“华”字的学生其“姓名”、“课程名称”及“成绩”显示出来。将上述 SQL 查询语句及查询结果图分别截图复制粘贴至客户端桌面【M1-T2-SUBT3-提交结果 1.docx】中对应的任务序号下。</p>
+<h2 id="大数据应用与服务赛项试题08"><a href="#大数据应用与服务赛项试题08" class="headerlink" title="大数据应用与服务赛项试题08"></a>大数据应用与服务赛项试题08</h2><p>（二）任务二：数据库配置维护 </p>
+<p>1.子任务一：创建数据库及相关数据表在 MySQL 数据库中创建“test”数据库，并在“test”数据库中分别创建“stu”、“course”及“score”共 3 个数据表。各个数据表的表字段格式如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps220.jpg" alt="img"> </p>
+<p>将创建“test”数据库、“stu”、“course”及“score”的建表 结 果 图 分 别 截 图 复 制 粘 贴 至 客 户 端 桌 面【M1-T2-SUBT1-提交结果 1.docx】中对应的任务序号下</p>
+<p>2.子任务二：添加数据记录 </p>
+<p>分别为“stu”、“course”及“score”数据表添加数据记录。各个数据表需要添加的数据记录如下： </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps221.jpg" alt="img"> </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps222.jpg" alt="img"> </p>
+<p>将“stu”、“course”及“score”的数据添加结果图分 </p>
+<p>别截图复制粘贴至客户端桌面【M1-T2-SUBT2-提交结果</p>
+<p>3.子任务三：数据表查询 </p>
+<p>（1）将班级名称为“20 计算机 1 班 ”的所有学生其“学号”、“姓名”、“班级”、修过的“课程名称”及对应的“成 </p>
+<p>绩”显示出来； </p>
+<p>（2）将修了课程“学分”等于“2”的所有学生其“学号”、“姓名”、“课程名称”、“学分”及对应的“成绩”显示 </p>
+<p>出来； </p>
+<p>（3）将课程“成绩”在“75”至“80”之间的学生其 “学号”、“姓名”、“班级”、“课程名称”及对应的“成绩” </p>
+<p>显示出来。</p>
+<p>将上述 SQL 查询语句及查询结果图分别截图复制粘贴至 </p>
+<p>客户端桌面【M1-T2-SUBT3-提交结果 1.docx】中对应的任务 </p>
+<p>序号下</p>
+<h2 id="大数据应用与服务赛项试题09"><a href="#大数据应用与服务赛项试题09" class="headerlink" title="大数据应用与服务赛项试题09"></a>大数据应用与服务赛项试题09</h2><p>\1．子任务一：数据库配置\ </p>
+<p>（1） 在主机node3上安装mysql-community-server，启动MySQL服务，根据临时密码进入数据库，并修改本地密码为“123456”； </p>
+<p>（2） 开启MySQL远程连接权限，所有root用户都可以使用123456进行登录连接。 </p>
+<p>\2．子任务二：创建相关表\ </p>
+<p>（1） 结合数据特征，创建数据表fraud.fraud； </p>
+<p>（2） 将本地&#x2F;root&#x2F;hqedu&#x2F;目录下的数据文件fraud.txt导入MySQL对应数据库表。</p>
+<p>\3．子任务三：维护数据表\ </p>
+<p>结合数据进行如下查询和操作。 </p>
+<p>（1） 使用EXPLAIN语句获取查询语句的执行计划； </p>
+<p>（2） 为fraud表字段class(案件副类别)创建索引； </p>
+<p>（3） 对比索引查询情况</p>
+<h2 id="大数据应用与服务赛项试题10"><a href="#大数据应用与服务赛项试题10" class="headerlink" title="大数据应用与服务赛项试题10"></a>大数据应用与服务赛项试题10</h2><p>\（二）任务二：数据库配置维护\ </p>
+<p>\1.\子任务一：数据库配置\ </p>
+<p>1、配置服务端 MySQL 数据库的远程连接。</p>
+<p>2、初始化 MySQL 数据库系统，将完整命令及初始化成功的截图复制粘贴至客户端桌面【Release\任务 C 提交结果.docx】中对应的任务序号下。 </p>
+<p>3、配置 root 用户允许任意 ip 连接，将完整命令截图复制粘贴至客户端桌面【Release\任务 C 提交结果.docx】中对应的任务序号下。 </p>
+<p>4、通过 root 用户登录 MySQL 数据库系统，查看 mysql库下的所有表，将完整命令及执行命令后的结果的截图复制粘贴至客户端桌面【Release\任务 C 提交结果.docx】中对应的任务序号下。 </p>
+<p>5、输入命令以创建新的用户。完整命令及执行命令后的结果的截图复制粘贴至客户端桌面【Release\任务 C 提交结果.docx】中对应的任务序号下。 </p>
+<p>6、授予新用户访问数据的权限。完整命令及执行命令后的结果的截图复制粘贴至客户端桌面【Release\任务 C 提交结果.docx】中对应的任务序号下。 </p>
+<p>7、刷新权限。完整命令及执行命令后的结果的截图复制粘贴至客户端桌面【Release\任务 C 提交结果.docx】中对应的任务序号下。</p>
+<p>1、根据以下数据字段在 MySQL 数据库中创建酒店表</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps223.jpg" alt="img"> </p>
+<p>2.根据以下数据字段在 MySQL 数据库中创建评论表（comment）。评论表字段如下： </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps224.jpg" alt="img"> </p>
+<p>将这两个 SQL 建表语句分别截图复制粘贴至客户端桌面【Release\任务 C 提交结果.docx】中对应的任务序号下</p>
+<p>\3.\子任务三：维护数据表\ </p>
+<p>根据已给到的 sql 文件将这两份数据导入任意自己创建 </p>
+<p>的数据库中，并对其中的数据进行如下操作： </p>
+<p>1、在 hotel_all 表中删除 id 为 25 的酒店数据; </p>
+<p>2、在 comment_all 表中将 id 为 30 的评分改为 5。将这两个 SQL 语句分别截图复制粘贴至客户端桌面 【Release\任务 C 提交结果.docx】中对应的任务序号下。 </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps225.jpg" alt="img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="file:///C:\Users\Karey\AppData\Local\Temp\ksohtml2392\wps226.jpg" alt="img"></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/image5.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/image5.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">叶小楠</div><div class="post-copyright__author_desc">计算，为了无法计算的时间</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.yexiaonan.fun/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.yexiaonan.fun/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/')">大数据应用与服务赛项试题1-10</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.yexiaonan.fun/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=大数据应用与服务赛项试题1-10&amp;url=https://blog.yexiaonan.fun/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/&amp;pic=https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=07760e5a-fb47-8c9f-b062-0fe64e6f0648" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.yexiaonan.fun" target="_blank">叶小楠的个人博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/MySQL/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>MySQL<span class="tagsPageCount">4</span></a><a class="post-meta__box__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>大数据应用与服务<span class="tagsPageCount">4</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=07760e5a-fb47-8c9f-b062-0fe64e6f0648" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/10/10/Linux%E5%9F%BA%E7%A1%80/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=af553fab-2ac5-b8a0-53cb-4b9f93c9e12c" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Linux基础</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/10/07/MySQL+Hive%E9%85%8D%E7%BD%AE/" title="MySQL+Hive配置"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=d41ed1a3-0eb2-c156-dec0-96b14f41cc4d" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-07</div><div class="title">MySQL+Hive配置</div></div></a></div><div><a href="/2024/10/07/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="MySQL的基础用法"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/reservoir-8487798_1280.jpg?_r_=e842b6e5-71b7-30c7-e24b-944822589faa" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-07</div><div class="title">MySQL的基础用法</div></div></a></div><div><a href="/2024/10/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%A1%8C%E4%B8%9A%E8%B5%9BMySQL%E9%85%8D%E7%BD%AE/" title="MySQL大数据应用与服务行业赛搭建要求"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/pic_4.jpg?_r_=8ea9a916-1467-6462-80d0-1964ffd7cc45" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-07</div><div class="title">MySQL大数据应用与服务行业赛搭建要求</div></div></a></div><div><a href="/2024/10/07/Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA/" title="Hadoop完全分布式搭建"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/img1.wallspic.com-lu_xing-shan_mai-zi_ran_jing_guan-xie_po-gao_de-6016x4016.jpg?_r_=afb8fb7d-6ac9-c669-d36d-6e8a1d027e4d" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-07</div><div class="title">Hadoop完全分布式搭建</div></div></a></div><div><a href="/2024/10/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="大数据应用与服务基础环境搭建"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/img3.wallspic.com-air-ta-imac_qin-macos_mojave-ping_guo-5120x2880.jpg?_r_=77c1dbd6-058d-d19b-6a71-90c303e471d4" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-08</div><div class="title">大数据应用与服务基础环境搭建</div></div></a></div><div><a href="/2022/10/09/Hadoop%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-%E6%9C%80%E8%AF%A6%E7%BB%86/" title="Hadoop安装教程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/img3.wallspic.com-air-ta-imac_qin-macos_mojave-ping_guo-5120x2880.jpg?_r_=7108a008-1464-f167-24ab-d7cd660c27de" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-10-09</div><div class="title">Hadoop安装教程</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/image5.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">叶小楠</h1><div class="author-info__desc">计算，为了无法计算的时间</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/yexiaonan" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9801"><span class="toc-number">1.</span> <span class="toc-text">大数据应用与服务赛项试题01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9802"><span class="toc-number">2.</span> <span class="toc-text">大数据应用与服务赛项试题02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9803"><span class="toc-number">3.</span> <span class="toc-text">大数据应用与服务赛项试题03</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9805"><span class="toc-number">4.</span> <span class="toc-text">大数据应用与服务赛项试题05</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9806"><span class="toc-number">5.</span> <span class="toc-text">大数据应用与服务赛项试题06</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9807"><span class="toc-number">6.</span> <span class="toc-text">大数据应用与服务赛项试题07</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9808"><span class="toc-number">7.</span> <span class="toc-text">大数据应用与服务赛项试题08</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9809"><span class="toc-number">8.</span> <span class="toc-text">大数据应用与服务赛项试题09</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%9810"><span class="toc-number">9.</span> <span class="toc-text">大数据应用与服务赛项试题10</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/" title="大数据应用与服务赛项试题1-10"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=07760e5a-fb47-8c9f-b062-0fe64e6f0648" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大数据应用与服务赛项试题1-10"/></a><div class="content"><a class="title" href="/2024/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E8%B5%9B%E9%A1%B9%E8%AF%95%E9%A2%981-10/" title="大数据应用与服务赛项试题1-10">大数据应用与服务赛项试题1-10</a><time datetime="2024-10-10T07:54:36.000Z" title="发表于 2024-10-10 15:54:36">2024-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/10/Linux%E5%9F%BA%E7%A1%80/" title="Linux基础"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/08/img2.wallspic.com-desktop_new_imac_2021_announcement-5120x2880.jpg?_r_=af553fab-2ac5-b8a0-53cb-4b9f93c9e12c" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux基础"/></a><div class="content"><a class="title" href="/2024/10/10/Linux%E5%9F%BA%E7%A1%80/" title="Linux基础">Linux基础</a><time datetime="2024-10-10T05:10:19.000Z" title="发表于 2024-10-10 13:10:19">2024-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/09/Python%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AC%94%E8%AE%B0/" title="Python可视化笔记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/wave-9067749_1280.jpg?_r_=411aedf0-7ebc-7cce-3bcc-7e8bb2049863" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python可视化笔记"/></a><div class="content"><a class="title" href="/2024/10/09/Python%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AC%94%E8%AE%B0/" title="Python可视化笔记">Python可视化笔记</a><time datetime="2024-10-09T03:59:05.000Z" title="发表于 2024-10-09 11:59:05">2024-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/09/Python%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" title="Python基础笔记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/pic_4.jpg?_r_=0ac7cd8b-5c31-2fd3-1bef-93ac9840589d" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python基础笔记"/></a><div class="content"><a class="title" href="/2024/10/09/Python%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" title="Python基础笔记">Python基础笔记</a><time datetime="2024-10-09T03:55:11.000Z" title="发表于 2024-10-09 11:55:11">2024-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/09/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E8%AE%B2%E8%A7%A3/" title="SQL注入漏洞讲解"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/img1.wallspic.com-lu_xing-shan_mai-zi_ran_jing_guan-xie_po-gao_de-6016x4016.jpg?_r_=48373a28-64fb-55d8-7c92-5b2c60e023bb" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SQL注入漏洞讲解"/></a><div class="content"><a class="title" href="/2024/10/09/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E8%AE%B2%E8%A7%A3/" title="SQL注入漏洞讲解">SQL注入漏洞讲解</a><time datetime="2024-10-09T02:35:09.000Z" title="发表于 2024-10-09 10:35:09">2024-10-09</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 By <a class="footer-bar-link" href="/" title="叶小楠" target="_blank">叶小楠</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">20</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 其他</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友情链接</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CCF%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%A1%8C%E4%B8%9A%E8%B5%9B/" style="font-size: 0.88rem;">CCF大数据行业赛<sup>1</sup></a><a href="/tags/Echarts-%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 0.88rem;">Echarts-可视化<sup>1</sup></a><a href="/tags/Flink/" style="font-size: 0.88rem;">Flink<sup>1</sup></a><a href="/tags/HBase/" style="font-size: 0.88rem;">HBase<sup>1</sup></a><a href="/tags/HDFS/" style="font-size: 0.88rem;">HDFS<sup>1</sup></a><a href="/tags/Hadoop/" style="font-size: 0.88rem;">Hadoop<sup>3</sup></a><a href="/tags/Hive/" style="font-size: 0.88rem;">Hive<sup>1</sup></a><a href="/tags/JDK/" style="font-size: 0.88rem;">JDK<sup>1</sup></a><a href="/tags/Kafka/" style="font-size: 0.88rem;">Kafka<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>1</sup></a><a href="/tags/Markdown/" style="font-size: 0.88rem;">Markdown<sup>2</sup></a><a href="/tags/MySQL/" style="font-size: 0.88rem;">MySQL<sup>4</sup></a><a href="/tags/Pandas/" style="font-size: 0.88rem;">Pandas<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>2</sup></a><a href="/tags/Python-Request%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 0.88rem;">Python-Request数据爬取<sup>1</sup></a><a href="/tags/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 0.88rem;">Python-scrapy数据爬取<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 0.88rem;">SQL<sup>1</sup></a><a href="/tags/Spark/" style="font-size: 0.88rem;">Spark<sup>2</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%961/" style="font-size: 0.88rem;">Spark数据抽取1<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%962/" style="font-size: 0.88rem;">Spark数据抽取2<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%963/" style="font-size: 0.88rem;">Spark数据抽取3<sup>1</sup></a><a href="/tags/Sqoop/" style="font-size: 0.88rem;">Sqoop<sup>1</sup></a><a href="/tags/Zookeeper/" style="font-size: 0.88rem;">Zookeeper<sup>1</sup></a><a href="/tags/Zoomit%E8%AF%AD%E6%B3%95/" style="font-size: 0.88rem;">Zoomit语法<sup>1</sup></a><a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 0.88rem;">可视化<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%83%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem;">国赛题-第七套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem;">国赛题-第三套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%BA%94%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem;">国赛题-第五套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AB%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem;">国赛题-第八套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AD%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem;">国赛题-第六套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%8D%81%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem;">国赛题-第十套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%9B%9B%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem;">国赛题-第四套题<sup>1</sup></a><a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1/" style="font-size: 0.88rem;">大数据应用与服务<sup>4</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.88rem;">网络安全<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("10/07/2024 17:30:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 叶小楠 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("10/07/2024 17:30:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "";
+        img.title = "";
+        img.alt = "";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><span id="fps"></span><link rel="stylesheet" href="/custom/fps/fps.css" media="defer" onload="this.media='all'"><script src="/custom/fps/fps.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
