@@ -59,7 +59,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-10-14 17:17:04',
+  postUpdate: '2024-10-16 19:27:23',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -336,7 +336,7 @@ to_csv:保存的csv文件
 1import csv
 
 
-代码部分源码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143import requestsfrom lxml import etreeimport timeimport base64import osimport csvclass ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/')"><div class="post_cover left"><a href="/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" title="Python-scrapy数据爬取" style="display: flex;height: 100%;"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/forest-7580700_1280.jpg?_r_=85cff546-6417-d6b9-4e7d-a9e834169834" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python-scrapy数据爬取" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">Python-scrapy数据爬取</div><a class="unvisited-post" href="/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" title="Python-scrapy数据爬取">未读</a></div><a class="article-title" href="/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" title="Python-scrapy数据爬取">Python-scrapy数据爬取</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-19T03:05:07.000Z" title="发表于 2023-11-19 11:05:07" time="2023-11-19 11:05:07">2023-11-19</time><time class="time_hidden" datetime="2024-01-28T07:48:30.000Z" title="更新于 2024-01-28 15:48:30" time="2024-01-28 15:48:30">2024-01-28</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Python-scrapy数据爬取</span></a></span></div><div class="content">新建一个项目Windows：打开cmd，输入:1pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scrapy
+代码部分源码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143import requestsfrom lxml import etreeimport timeimport base64import osimport csvclass ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/')"><div class="post_cover left"><a href="/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" title="Python-scrapy数据爬取" style="display: flex;height: 100%;"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/forest-7580700_1280.jpg?_r_=391d7e2e-777d-9b20-6fd7-95e3a883a84a" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python-scrapy数据爬取" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">Python-scrapy数据爬取</div><a class="unvisited-post" href="/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" title="Python-scrapy数据爬取">未读</a></div><a class="article-title" href="/2023/11/19/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" title="Python-scrapy数据爬取">Python-scrapy数据爬取</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-19T03:05:07.000Z" title="发表于 2023-11-19 11:05:07" time="2023-11-19 11:05:07">2023-11-19</time><time class="time_hidden" datetime="2024-10-16T11:26:08.806Z" title="更新于 2024-10-16 19:26:08" time="2024-10-16 19:26:08">2024-10-16</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Python-scrapy数据爬取</span></a></span></div><div class="content">新建一个项目Windows：打开cmd，输入:1pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scrapy
 
 12mkdir 文件夹名称cd 到你刚创建的文件夹
 
@@ -348,7 +348,7 @@ to_csv:保存的csv文件
 创建爬虫的py文件
 1scrapy genspider 爬虫名称 这个是网址
 看到Created spider就代表创建成
-ubantu终端启动pycharm1cd 到你的pycharm的根目录
+Ubantu终端启动Pycharm1cd 到你的pycharm的根目录
 
 
 启动直接键入即可
