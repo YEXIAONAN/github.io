@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yexiaonan.fun/2024/10/18/JetBrains%E8%BD%AF%E4%BB%B6%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    
+    <lastmod>2024-10-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.yexiaonan.fun/2024/10/12/Java%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2024-10-18</lastmod>
@@ -657,6 +666,13 @@
   
   <url>
     <loc>https://blog.yexiaonan.fun/tags/CCF/</loc>
+    <lastmod>2024-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yexiaonan.fun/tags/Jetbrains/</loc>
     <lastmod>2024-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
