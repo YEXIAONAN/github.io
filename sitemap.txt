@@ -1,3 +1,5 @@
+https://blog.yexiaonan.fun/2024/10/24/%E9%9A%90%E8%97%8F%E8%BA%AB%E4%BB%BD%E7%9A%84%E5%BC%B1%E4%B8%BB%E9%80%86%E8%A2%AD%EF%BC%9A%E7%8E%84%E5%B9%BB%E5%A4%A7BOSS%E5%B4%9B%E8%B5%B7%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/
+https://blog.yexiaonan.fun/2024/10/24/%E9%9A%90%E8%97%8F%E8%BA%AB%E4%BB%BD%E7%9A%84%E5%BC%B1%E4%B8%BB%E9%80%86%E8%A2%AD%EF%BC%9A%E7%8E%84%E5%B9%BB%E5%A4%A7BOSS%E5%B4%9B%E8%B5%B7%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0/
 https://blog.yexiaonan.fun/2024/10/12/Java%E5%9F%BA%E7%A1%80/
 https://blog.yexiaonan.fun/2024/10/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/
 https://blog.yexiaonan.fun/2024/10/18/JetBrains%E8%BD%AF%E4%BB%B6%E5%BF%AB%E6%8D%B7%E9%94%AE/
@@ -80,6 +82,7 @@ https://blog.yexiaonan.fun/tags/Flink/
 https://blog.yexiaonan.fun/tags/Kafka/
 https://blog.yexiaonan.fun/tags/Sqoop/
 https://blog.yexiaonan.fun/tags/CCF/
+https://blog.yexiaonan.fun/tags/%E7%9F%AD%E6%96%87/
 https://blog.yexiaonan.fun/categories/Echarts-%E5%8F%AF%E8%A7%86%E5%8C%96/
 https://blog.yexiaonan.fun/categories/Hadoop-HDFS%E5%91%BD%E4%BB%A4%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/
 https://blog.yexiaonan.fun/categories/Linux%E5%9F%BA%E7%A1%80/
