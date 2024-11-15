@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.yexiaonan.fun/2024/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://blog.yexiaonan.fun/2024/11/15/CentOS%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2024-11-15</lastmod>
     
@@ -691,6 +691,13 @@
   
   <url>
     <loc>https://blog.yexiaonan.fun/tags/Sqoop/</loc>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yexiaonan.fun/tags/CentOS/</loc>
     <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
