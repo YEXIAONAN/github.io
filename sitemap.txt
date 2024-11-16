@@ -1,3 +1,4 @@
+https://blog.yexiaonan.fun/2024/11/16/%E8%B0%88%E8%B0%88%E4%B8%8D%E5%AD%A6%E4%B9%A0%E4%BD%A0%E5%8F%AA%E8%83%BD%E5%B9%B2%E4%BB%80%E4%B9%88%EF%BC%9F/
 https://blog.yexiaonan.fun/2024/11/15/CentOS%E7%AC%94%E8%AE%B0/
 https://blog.yexiaonan.fun/2024/10/12/Java%E5%9F%BA%E7%A1%80/
 https://blog.yexiaonan.fun/2024/11/12/Linux%E4%B8%8B%E9%85%8D%E7%BD%AENTP%E6%97%B6%E9%92%9F%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1/
@@ -84,6 +85,7 @@ https://blog.yexiaonan.fun/tags/Flink/
 https://blog.yexiaonan.fun/tags/Kafka/
 https://blog.yexiaonan.fun/tags/Sqoop/
 https://blog.yexiaonan.fun/tags/CentOS/
+https://blog.yexiaonan.fun/tags/%E6%96%87%E7%AB%A0/
 https://blog.yexiaonan.fun/categories/Echarts-%E5%8F%AF%E8%A7%86%E5%8C%96/
 https://blog.yexiaonan.fun/categories/Hadoop-HDFS%E5%91%BD%E4%BB%A4%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/
 https://blog.yexiaonan.fun/categories/Linux%E5%9F%BA%E7%A1%80/
