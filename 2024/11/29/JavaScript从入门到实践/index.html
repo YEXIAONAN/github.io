@@ -1,0 +1,517 @@
+<!DOCTYPE html><html lang="Zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>JavaScript从入门到实践 | 叶小楠的博客</title><meta name="author" content="叶小楠"><meta name="copyright" content="叶小楠"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="JavaScript从入门到实践"><meta name="application-name" content="JavaScript从入门到实践"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript从入门到实践"><meta property="og:url" content="https://blog.yexiaonan.fun/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/index.html"><meta property="og:site_name" content="叶小楠的博客"><meta property="og:description" content="JavaScript从入门到实践 软件版本(VSCode)：   版本: 1.95.3 (user setup)提交: f1a4fb101478ce6ec82fe9627c43efbf9e98c813日期: 2024-11-13T14:50:04.152ZElectron: 32.2.1Electr"><meta property="og:locale" content="Zh-CN"><meta property="og:image" content="https://s21.ax1x.com/2024/11/19/pAROeTH.jpg?_r_=493df122-6a95-209d-12a1-7f1c29ca6dde"><meta property="article:author" content="叶小楠"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://s21.ax1x.com/2024/11/19/pAROeTH.jpg?_r_=493df122-6a95-209d-12a1-7f1c29ca6dde"><meta name="description" content="JavaScript从入门到实践 软件版本(VSCode)：   版本: 1.95.3 (user setup)提交: f1a4fb101478ce6ec82fe9627c43efbf9e98c813日期: 2024-11-13T14:50:04.152ZElectron: 32.2.1Electr"><link rel="shortcut icon" href="https://pxy.shenyi.cyou/2024/11/18/yjjlx-k9lrx-001.ico"><link rel="canonical" href="https://blog.yexiaonan.fun/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":true,"ck":"3JyQA4jf1wro4LZb","LingQueMonitorID":"3JyQKwNREZE8MyhO"},
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: {"skills":null},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":10,"position":"top","messagePrev":"【小楠提醒】它一直","messageNext":"自上次更新以来的天数，文章的内容可能已过时。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 叶小楠","link":"链接: ","source":"来源: 叶小楠的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '叶小楠的博客',
+  title: 'JavaScript从入门到实践',
+  postAI: '',
+  pageFillDescription: 'JavaScript从入门到实践, JavaScript是什么❓, 主要用途：, JavaScript的基础语法从入门到实践软件版本版本提交日期是什么是一种广泛使用的编程语言主要用于网页开发它是一种脚本语言最初用于为网页添加交互性和动态内容可以在网页中执行使得页面不需要重新加载就能更新内容它通常与和一起使用来构建和设计网站的核心特点包括客户端脚本语言通常在用户的浏览器中运行而不是在服务器上运行这意味着它可以快速响应用户输入无需与服务器频繁交互事件驱动允许网页响应用户的各种操作如点击键盘输入鼠标移动等动态类型语言变量的类型在运行时可以改变不需要声明变量类型支持面向对象编程和函数式编程支持这两种编程范式允许开发者使用不同的编程风格跨平台性可以在所有现代浏览器中运行并且也可以在服务器端通过来执行使其适用于全栈开发主要用途网页前端开发通过文档对象模型和异步和技术可以使网页响应用户行为实现如表单验证动态更新内容等功能服务器端开发通过也可以用于后端开发构建和服务器应用应用和移动应用开发框架如和等使得成为构建现代单页应用的重要工具总结来说是一门强大且灵活的编程语言推动了现代网页和应用开发的快速发展的基础语法首先我们在写网页前端时如果单单使用语法会显得太单调那么这个时候我们就可以选择在页面中添加一些来进行优化以及配合样式还没学来进行美化在开始编写文件时在下面我们统称为请注意将文件名称修改为后缀格式开始编写第一个我是一个弹窗在上面这段代码中我们标签之内就是语法一般地我们的框架要跟在标签的下方因为我们文件加载如同大多数编程语言一样加载从上到下在上面我们学会了如何在文件内编写代码但是在平常的使用中我们会更喜欢将语法单独写在一个文件内而不是写在一个文件中影响美观那么我们应该怎么样从外部调用文件呢请看示例相比于上一个示例这个示例显得更简洁我们将文件单独存放在一个文件夹中在标签中使用进行引用这使我们的页面更加简洁',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-29 14:07:53',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://s21.ax1x.com/2024/11/19/pAROl1P.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.yexiaonan.fun/" title="叶小楠的主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="叶小楠的主页"/><span class="back-menu-item-text">叶小楠的主页</span></a><a class="back-menu-item" href="https://blog.yexiaonan.fun/" title="叶小楠的博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="叶小楠的博客"/><span class="back-menu-item-text">叶小楠的博客</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">叶小楠的博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 其他</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友情链接</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CCF/" style="font-size: 1.05rem;">CCF<sup>2</sup></a><a href="/tags/CentOS/" style="font-size: 1.05rem;">CentOS<sup>1</sup></a><a href="/tags/Echarts-%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.05rem;">Echarts-可视化<sup>1</sup></a><a href="/tags/Flink/" style="font-size: 1.05rem;">Flink<sup>1</sup></a><a href="/tags/HDFS/" style="font-size: 1.05rem;">HDFS<sup>1</sup></a><a href="/tags/Hadoop/" style="font-size: 1.05rem;">Hadoop<sup>3</sup></a><a href="/tags/Hive/" style="font-size: 1.05rem;">Hive<sup>1</sup></a><a href="/tags/JDK/" style="font-size: 1.05rem;">JDK<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>1</sup></a><a href="/tags/Kafka/" style="font-size: 1.05rem;">Kafka<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>1</sup></a><a href="/tags/MC%E7%89%88%E6%B2%99%E5%A8%81%E7%8E%9B/" style="font-size: 1.05rem;">MC版沙威玛<sup>1</sup></a><a href="/tags/MapReudce/" style="font-size: 1.05rem;">MapReudce<sup>1</sup></a><a href="/tags/Markdown/" style="font-size: 1.05rem;">Markdown<sup>2</sup></a><a href="/tags/MySQL/" style="font-size: 1.05rem;">MySQL<sup>2</sup></a><a href="/tags/MySQl/" style="font-size: 1.05rem;">MySQl<sup>1</sup></a><a href="/tags/NTP/" style="font-size: 1.05rem;">NTP<sup>1</sup></a><a href="/tags/Pandas/" style="font-size: 1.05rem;">Pandas<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>3</sup></a><a href="/tags/Python-Request%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 1.05rem;">Python-Request数据爬取<sup>1</sup></a><a href="/tags/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 1.05rem;">Python-scrapy数据爬取<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 1.05rem;">SQL<sup>1</sup></a><a href="/tags/Spark/" style="font-size: 1.05rem;">Spark<sup>2</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%961/" style="font-size: 1.05rem;">Spark数据抽取1<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%962/" style="font-size: 1.05rem;">Spark数据抽取2<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%963/" style="font-size: 1.05rem;">Spark数据抽取3<sup>1</sup></a><a href="/tags/Sqoop/" style="font-size: 1.05rem;">Sqoop<sup>1</sup></a><a href="/tags/Typora/" style="font-size: 1.05rem;">Typora<sup>1</sup></a><a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.05rem;">可视化<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%83%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第七套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第三套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%BA%94%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第五套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AB%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第八套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AD%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第六套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%8D%81%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第十套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%9B%9B%E5%A5%97%E9%A2%98/" style="font-size: 1.05rem;">国赛题-第四套题<sup>1</sup></a><a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1/" style="font-size: 1.05rem;">大数据应用与服务<sup>4</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 1.05rem;">技术分享<sup>1</sup></a><a href="/tags/%E6%96%87%E7%AB%A0/" style="font-size: 1.05rem;">文章<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.05rem;">网络安全<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">16</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">JavaScript从入门到实践</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-11-29T06:07:26.000Z" title="发表于 2024-11-29 14:07:26">2024-11-29</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-11-29T06:07:53.525Z" title="更新于 2024-11-29 14:07:53">2024-11-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">983</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为南宁"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>南宁</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://s21.ax1x.com/2024/11/19/pAROeTH.jpg?_r_=493df122-6a95-209d-12a1-7f1c29ca6dde"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://blog.yexiaonan.fun/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/"><header><h1 id="CrawlerTitle" itemprop="name headline">JavaScript从入门到实践</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">叶小楠</span><time itemprop="dateCreated datePublished" datetime="2024-11-29T06:07:26.000Z" title="发表于 2024-11-29 14:07:26">2024-11-29</time><time itemprop="dateCreated datePublished" datetime="2024-11-29T06:07:53.525Z" title="更新于 2024-11-29 14:07:53">2024-11-29</time></header><h1 id="JavaScript从入门到实践"><a href="#JavaScript从入门到实践" class="headerlink" title="JavaScript从入门到实践"></a>JavaScript从入门到实践</h1><ul>
+<li>软件版本(VSCode)：</li>
+</ul>
+<blockquote>
+<p>版本: 1.95.3 (user setup)<br>提交: f1a4fb101478ce6ec82fe9627c43efbf9e98c813<br>日期: 2024-11-13T14:50:04.152Z<br>Electron: 32.2.1<br>ElectronBuildId: 10427718<br>Chromium: 128.0.6613.186<br>Node.js: 20.18.0<br>V8: 12.8.374.38-electron.0</p>
+</blockquote>
+<h2 id="JavaScript是什么❓"><a href="#JavaScript是什么❓" class="headerlink" title="JavaScript是什么❓"></a>JavaScript是什么❓</h2><p>JavaScript 是一种广泛使用的编程语言，主要用于网页开发。它是一种 <strong>脚本语言</strong>，最初用于为网页添加交互性和动态内容。JavaScript 可以在网页中执行，使得页面不需要重新加载就能更新内容。它通常与 HTML 和 CSS 一起使用，来构建和设计网站。</p>
+<p>JavaScript 的核心特点包括：</p>
+<ol>
+<li><strong>客户端脚本语言</strong>：JavaScript 通常在用户的浏览器中运行，而不是在服务器上运行。这意味着它可以快速响应用户输入，无需与服务器频繁交互。</li>
+<li><strong>事件驱动</strong>：JavaScript 允许网页响应用户的各种操作，如点击、键盘输入、鼠标移动等。</li>
+<li><strong>动态类型语言</strong>：变量的类型在运行时可以改变，不需要声明变量类型。</li>
+<li><strong>支持面向对象编程（OOP）和函数式编程（FP）</strong>：JavaScript 支持这两种编程范式，允许开发者使用不同的编程风格。</li>
+<li><strong>跨平台性</strong>：JavaScript 可以在所有现代浏览器中运行，并且也可以在服务器端通过 Node.js 来执行，使其适用于全栈开发。</li>
+</ol>
+<h3 id="主要用途："><a href="#主要用途：" class="headerlink" title="主要用途："></a>主要用途：</h3><ul>
+<li><strong>网页前端开发</strong>：通过 DOM（文档对象模型）和 AJAX（异步 JavaScript 和 XML）技术，JavaScript 可以使网页响应用户行为，实现如表单验证、动态更新内容等功能。</li>
+<li><strong>服务器端开发</strong>：通过 Node.js，JavaScript 也可以用于后端开发，构建 API 和服务器应用。</li>
+<li><strong>Web应用和移动应用开发</strong>：框架如 React、Vue 和 Angular 等使得 JavaScript 成为构建现代单页应用（SPA）的重要工具。</li>
+</ul>
+<p>总结来说，JavaScript 是一门强大且灵活的编程语言，推动了现代网页和应用开发的快速发展。</p>
+<h2 id="JavaScript的基础语法"><a href="#JavaScript的基础语法" class="headerlink" title="JavaScript的基础语法"></a>JavaScript的基础语法</h2><ul>
+<li><p>首先，我们在写网页前端时，如果单单使用Html语法会显得太单调，那么这个时候，我们就可以选择在Html页面中添加一些JavaScript来进行优化，以及配合Css样式（还没学）来进行美化。</p>
+</li>
+<li><p>在开始编写JavaScript文件时（在下面我们统称为Js），请注意将文件名称修改为【***.js】后缀格式</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>开始编写第一个Js：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">alert</span>(<span class="string">&#x27;我是一个弹窗&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>在上面这段代码中，我们<code> &lt;script&gt;&lt;/script&gt;</code>标签之内就是Js语法，一般地，我们Js的框架要跟在 <code>&lt;body&gt;&lt;/body&gt;</code>标签的下方，因为我们html文件加载如同大多数编程语言一样，加载从上到下。</li>
+</ul>
+<hr>
+<ul>
+<li><p>在上面，我们学会了如何在html文件内编写Js代码，但是在平常的使用中，我们会更喜欢将Js语法单独写在一个文件内，而不是写在一个html文件中（影响美观）</p>
+</li>
+<li><p>那么我们应该怎么样从外部调用Js文件呢？</p>
+<ul>
+<li>请看示例：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;JS/Task2.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>相比于上一个示例，这个示例显得更简洁，我们将Js文件单独存放在一个文件夹中，在<script>标签中使用<code>src=&quot;&quot;</code>进行引用，这使我们的html页面更加简洁</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROl1P.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROl1P.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">叶小楠</div><div class="post-copyright__author_desc">计算，为了无法计算的时间</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.yexiaonan.fun/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.yexiaonan.fun/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/')">JavaScript从入门到实践</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/my_wehatpay.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pxy.shenyi.cyou/2024/10/07/my_alpay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.yexiaonan.fun/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=JavaScript从入门到实践&amp;url=https://blog.yexiaonan.fun/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/&amp;pic=https://s21.ax1x.com/2024/11/19/pAROeTH.jpg?_r_=493df122-6a95-209d-12a1-7f1c29ca6dde" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.yexiaonan.fun" target="_blank">叶小楠的博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="https://s21.ax1x.com/2024/11/19/pAROeTH.jpg?_r_=493df122-6a95-209d-12a1-7f1c29ca6dde" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/11/28/ECharts%E7%94%A8%E6%B3%95/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROQpt.jpg?_r_=0eb642dc-4292-2d37-fc58-6080254c9d0e" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">ECharts用法</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROl1P.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">叶小楠</h1><div class="author-info__desc">计算，为了无法计算的时间</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/yexiaonan" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">计算，为了无法计算的时间</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5"><span class="toc-number">1.</span> <span class="toc-text">JavaScript从入门到实践</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E6%98%AF%E4%BB%80%E4%B9%88%E2%9D%93"><span class="toc-number">1.1.</span> <span class="toc-text">JavaScript是什么❓</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%94%A8%E9%80%94%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">主要用途：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">JavaScript的基础语法</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/" title="JavaScript从入门到实践"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROeTH.jpg?_r_=493df122-6a95-209d-12a1-7f1c29ca6dde" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript从入门到实践"/></a><div class="content"><a class="title" href="/2024/11/29/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/" title="JavaScript从入门到实践">JavaScript从入门到实践</a><time datetime="2024-11-29T06:07:26.000Z" title="发表于 2024-11-29 14:07:26">2024-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/28/ECharts%E7%94%A8%E6%B3%95/" title="ECharts用法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROQpt.jpg?_r_=0eb642dc-4292-2d37-fc58-6080254c9d0e" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ECharts用法"/></a><div class="content"><a class="title" href="/2024/11/28/ECharts%E7%94%A8%E6%B3%95/" title="ECharts用法">ECharts用法</a><time datetime="2024-11-28T05:51:36.000Z" title="发表于 2024-11-28 13:51:36">2024-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/26/%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A0%E6%B3%95%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87/" title="解决数据库无法插入中文"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROVmD.jpg?_r_=a5b5dcd1-e8e6-6290-fcf1-450b78647910" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决数据库无法插入中文"/></a><div class="content"><a class="title" href="/2024/11/26/%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%A0%E6%B3%95%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87/" title="解决数据库无法插入中文">解决数据库无法插入中文</a><time datetime="2024-11-26T05:53:48.000Z" title="发表于 2024-11-26 13:53:48">2024-11-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/22/MapReduce%E5%9C%A8%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%9B%86%E7%BE%A4%E4%B8%AD%E5%85%85%E5%BD%93%E4%BA%86%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%A7%92%E8%89%B2/" title="MapReduce在大数据集群中充当了什么样的角色?"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROutA.jpg?_r_=584ba964-3198-9e81-6df1-017e203b3692" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MapReduce在大数据集群中充当了什么样的角色?"/></a><div class="content"><a class="title" href="/2024/11/22/MapReduce%E5%9C%A8%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%9B%86%E7%BE%A4%E4%B8%AD%E5%85%85%E5%BD%93%E4%BA%86%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%A7%92%E8%89%B2/" title="MapReduce在大数据集群中充当了什么样的角色?">MapReduce在大数据集群中充当了什么样的角色?</a><time datetime="2024-11-22T06:36:31.000Z" title="发表于 2024-11-22 14:36:31">2024-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/20/Typora%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/" title="Typora激活教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s21.ax1x.com/2024/11/19/pAROQpt.jpg?_r_=c4f629e8-49f1-950e-461b-43b147594ec8" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora激活教程"/></a><div class="content"><a class="title" href="/2024/11/20/Typora%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/" title="Typora激活教程">Typora激活教程</a><time datetime="2024-11-20T04:58:54.000Z" title="发表于 2024-11-20 12:58:54">2024-11-20</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 By <a class="footer-bar-link" href="/" title="叶小楠" target="_blank">叶小楠</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">40</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">16</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.yexiaonan.fun/" title="叶小楠的主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="叶小楠的主页"/><span class="back-menu-item-text">叶小楠的主页</span></a><a class="back-menu-item" href="https://blog.yexiaonan.fun/" title="叶小楠的博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="叶小楠的博客"/><span class="back-menu-item-text">叶小楠的博客</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 其他</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友情链接</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CCF/" style="font-size: 0.88rem; color: rgb(182, 6, 119);">CCF<sup>2</sup></a><a href="/tags/CentOS/" style="font-size: 0.88rem; color: rgb(116, 132, 109);">CentOS<sup>1</sup></a><a href="/tags/Echarts-%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 0.88rem; color: rgb(89, 151, 60);">Echarts-可视化<sup>1</sup></a><a href="/tags/Flink/" style="font-size: 0.88rem; color: rgb(129, 64, 54);">Flink<sup>1</sup></a><a href="/tags/HDFS/" style="font-size: 0.88rem; color: rgb(51, 103, 173);">HDFS<sup>1</sup></a><a href="/tags/Hadoop/" style="font-size: 0.88rem; color: rgb(9, 75, 13);">Hadoop<sup>3</sup></a><a href="/tags/Hive/" style="font-size: 0.88rem; color: rgb(32, 55, 165);">Hive<sup>1</sup></a><a href="/tags/JDK/" style="font-size: 0.88rem; color: rgb(15, 154, 75);">JDK<sup>1</sup></a><a href="/tags/Java/" style="font-size: 0.88rem; color: rgb(109, 51, 183);">Java<sup>1</sup></a><a href="/tags/Kafka/" style="font-size: 0.88rem; color: rgb(37, 42, 161);">Kafka<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem; color: rgb(92, 84, 119);">Linux<sup>1</sup></a><a href="/tags/MC%E7%89%88%E6%B2%99%E5%A8%81%E7%8E%9B/" style="font-size: 0.88rem; color: rgb(45, 7, 48);">MC版沙威玛<sup>1</sup></a><a href="/tags/MapReudce/" style="font-size: 0.88rem; color: rgb(163, 102, 180);">MapReudce<sup>1</sup></a><a href="/tags/Markdown/" style="font-size: 0.88rem; color: rgb(156, 173, 40);">Markdown<sup>2</sup></a><a href="/tags/MySQL/" style="font-size: 0.88rem; color: rgb(116, 189, 19);">MySQL<sup>2</sup></a><a href="/tags/MySQl/" style="font-size: 0.88rem; color: rgb(54, 61, 34);">MySQl<sup>1</sup></a><a href="/tags/NTP/" style="font-size: 0.88rem; color: rgb(183, 135, 77);">NTP<sup>1</sup></a><a href="/tags/Pandas/" style="font-size: 0.88rem; color: rgb(175, 3, 89);">Pandas<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem; color: rgb(51, 120, 94);">Python<sup>3</sup></a><a href="/tags/Python-Request%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 0.88rem; color: rgb(6, 86, 61);">Python-Request数据爬取<sup>1</sup></a><a href="/tags/Python-scrapy%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96/" style="font-size: 0.88rem; color: rgb(46, 184, 153);">Python-scrapy数据爬取<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 0.88rem; color: rgb(30, 40, 92);">SQL<sup>1</sup></a><a href="/tags/Spark/" style="font-size: 0.88rem; color: rgb(64, 85, 54);">Spark<sup>2</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%961/" style="font-size: 0.88rem; color: rgb(189, 104, 33);">Spark数据抽取1<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%962/" style="font-size: 0.88rem; color: rgb(7, 128, 5);">Spark数据抽取2<sup>1</sup></a><a href="/tags/Spark%E6%95%B0%E6%8D%AE%E6%8A%BD%E5%8F%963/" style="font-size: 0.88rem; color: rgb(17, 102, 91);">Spark数据抽取3<sup>1</sup></a><a href="/tags/Sqoop/" style="font-size: 0.88rem; color: rgb(197, 167, 80);">Sqoop<sup>1</sup></a><a href="/tags/Typora/" style="font-size: 0.88rem; color: rgb(145, 19, 149);">Typora<sup>1</sup></a><a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 0.88rem; color: rgb(4, 67, 68);">可视化<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%83%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem; color: rgb(32, 8, 159);">国赛题-第七套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%B8%89%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem; color: rgb(147, 163, 173);">国赛题-第三套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E4%BA%94%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem; color: rgb(100, 13, 193);">国赛题-第五套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AB%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem; color: rgb(59, 185, 14);">国赛题-第八套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%85%AD%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem; color: rgb(128, 74, 94);">国赛题-第六套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%8D%81%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem; color: rgb(65, 5, 39);">国赛题-第十套题<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B%E9%A2%98-%E7%AC%AC%E5%9B%9B%E5%A5%97%E9%A2%98/" style="font-size: 0.88rem; color: rgb(171, 103, 138);">国赛题-第四套题<sup>1</sup></a><a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1/" style="font-size: 0.88rem; color: rgb(54, 140, 195);">大数据应用与服务<sup>4</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 0.88rem; color: rgb(148, 169, 62);">技术分享<sup>1</sup></a><a href="/tags/%E6%96%87%E7%AB%A0/" style="font-size: 0.88rem; color: rgb(185, 190, 113);">文章<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 0.88rem; color: rgb(93, 113, 113);">网络安全<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("10/07/2024 17:30:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 叶小楠 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("10/07/2024 17:30:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "";
+        img.title = "";
+        img.alt = "";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><span id="fps"></span><link rel="stylesheet" href="/custom/fps/fps.css" media="defer" onload="this.media='all'"><script src="/custom/fps/fps.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
