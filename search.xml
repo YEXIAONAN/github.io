@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MySQL数据库解决中文插入</title>
+      <link href="/2024/12/03/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E6%8F%92%E5%85%A5/"/>
+      <url>/2024/12/03/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E6%8F%92%E5%85%A5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><ul><li><p>相信搞Linux运维方向的对数据库都有所耳闻，特别是市场上最常见的MySQL数据库。它是一个开源的关系型数据库管理系统（RDBMS，Relational Database Management System），它使用 SQL（结构化查询语言）来管理和操作数据。MySQL 被广泛用于存储、管理和查询结构化数据，适用于各类应用程序，尤其是在 Web 开发和小型到大型企业应用中。</p></li><li><p>但是如果你是小白，相信在第一次使用MySQL创建表时，可能会发现你创建的数据表无法插入中文字符串，这是因为MySQL在默认创建表的时候使用了不支持中文的字符集，需要在创建表的时候，或者修改表的结构来进行插入中文。</p></li></ul><h2 id="如何实现❓"><a href="#如何实现❓" class="headerlink" title="如何实现❓"></a>如何实现❓</h2><ul><li><p>在创建数据库的时候：</p><ul><li><p>你可以选择在创建库的语句后面添加一句话，像这样</p></li><li><pre><code class="mysql">create datbase your_database_name character set utf8mb4 collate utf8mb4_general_ci;<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 那库已经创建了怎么修改呢？</span><br><span class="line"></span><br><span class="line">- ```mysql</span><br><span class="line">  alter database your_database_name character set utf8mb4 collate utf8mb4_general_ci;</span><br></pre></td></tr></table></figure></code></pre></li></ul></li><li><p>在创建数据表的时候：</p><ul><li><p>你可以选择在创建表的时候在后面添加一句话，像这样</p></li><li><pre><code class="mysql">CREATE TABLE table_name (    column1 datatype,    column2 datatype,    ...)CHARACTER SET utf8mb4COLLATE utf8mb4_general_ci;<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 如果表已经创建了，使用下方的语句来更新表结构</span><br><span class="line"></span><br><span class="line">- ```mysql</span><br><span class="line">  ALTER TABLE table_name</span><br><span class="line">  CHARACTER SET utf8mb4</span><br><span class="line">  COLLATE utf8mb4_general_ci;</span><br><span class="line">  </span><br></pre></td></tr></table></figure></code></pre></li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>佛祖保佑，永无Bug注释</title>
       <link href="/2024/12/02/%E4%BD%9B%E7%A5%96%E4%BF%9D%E4%BD%91%EF%BC%8C%E6%B0%B8%E6%97%A0Bug%E6%B3%A8%E9%87%8A/"/>
       <url>/2024/12/02/%E4%BD%9B%E7%A5%96%E4%BF%9D%E4%BD%91%EF%BC%8C%E6%B0%B8%E6%97%A0Bug%E6%B3%A8%E9%87%8A/</url>
