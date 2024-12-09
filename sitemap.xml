@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yexiaonan.fun/2024/10/07/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
+    
+    <lastmod>2024-12-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.yexiaonan.fun/2024/12/09/MapReduce%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
     
     <lastmod>2024-12-09</lastmod>
@@ -246,15 +255,6 @@
   
   <url>
     <loc>https://blog.yexiaonan.fun/2024/10/07/Pandas%E7%9A%84%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95(%E5%9B%BD%E8%B5%9B03)/</loc>
-    
-    <lastmod>2024-10-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.yexiaonan.fun/2024/10/07/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2024-10-09</lastmod>
     

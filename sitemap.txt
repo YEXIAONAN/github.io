@@ -1,3 +1,4 @@
+https://blog.yexiaonan.fun/2024/10/07/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/
 https://blog.yexiaonan.fun/2024/12/09/MapReduce%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/
 https://blog.yexiaonan.fun/2024/10/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/
 https://blog.yexiaonan.fun/2024/10/12/Java%E5%9F%BA%E7%A1%80/
@@ -26,7 +27,6 @@ https://blog.yexiaonan.fun/link/index.html
 https://blog.yexiaonan.fun/2024/10/09/Python%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AC%94%E8%AE%B0/
 https://blog.yexiaonan.fun/2024/10/09/Python%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/
 https://blog.yexiaonan.fun/2024/10/07/Pandas%E7%9A%84%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95(%E5%9B%BD%E8%B5%9B03)/
-https://blog.yexiaonan.fun/2024/10/07/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/
 https://blog.yexiaonan.fun/2024/10/07/Hadoop-HDFS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/
 https://blog.yexiaonan.fun/2024/10/09/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E8%AE%B2%E8%A7%A3/
 https://blog.yexiaonan.fun/2024/10/08/Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/
