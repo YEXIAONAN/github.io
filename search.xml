@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MapReduce中的数据类型</title>
+      <link href="/2024/12/09/MapReduce%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2024/12/09/MapReduce%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<p>Hadoop MapReduce 提供了一组官方的数据类型，这些类型被设计为可序列化（实现了 Hadoop 的 <code>Writable</code> 接口）并可用于分布式环境。以下是 Hadoop MapReduce 中的主要官方数据类型分类及说明：</p><hr><h3 id="1-基本数据类型"><a href="#1-基本数据类型" class="headerlink" title="1. 基本数据类型"></a><strong>1. 基本数据类型</strong></h3><table><thead><tr><th>数据类型</th><th>描述</th><th>对应的 Java 类型</th></tr></thead><tbody><tr><td><strong><code>IntWritable</code></strong></td><td>表示一个可序列化的整数</td><td><code>int</code></td></tr><tr><td><strong><code>LongWritable</code></strong></td><td>表示一个可序列化的长整数</td><td><code>long</code></td></tr><tr><td><strong><code>FloatWritable</code></strong></td><td>表示一个可序列化的浮点数</td><td><code>float</code></td></tr><tr><td><strong><code>DoubleWritable</code></strong></td><td>表示一个可序列化的双精度浮点数</td><td><code>double</code></td></tr><tr><td><strong><code>BooleanWritable</code></strong></td><td>表示一个可序列化的布尔值</td><td><code>boolean</code></td></tr><tr><td><strong><code>ByteWritable</code></strong></td><td>表示一个可序列化的字节</td><td><code>byte</code></td></tr><tr><td><strong><code>Text</code></strong></td><td>表示一个可序列化的字符串（替代 <code>String</code> 类型）</td><td><code>String</code></td></tr><tr><td><strong><code>NullWritable</code></strong></td><td>表示空值，通常用于不需要值的场景</td><td>无（空值）</td></tr></tbody></table><hr><h3 id="2-集合数据类型"><a href="#2-集合数据类型" class="headerlink" title="2. 集合数据类型"></a><strong>2. 集合数据类型</strong></h3><table><thead><tr><th>数据类型</th><th>描述</th><th>对应的 Java 类型</th></tr></thead><tbody><tr><td><strong><code>ArrayWritable</code></strong></td><td>表示一个可序列化的数组，元素类型需是 <code>Writable</code></td><td><code>Writable[]</code></td></tr><tr><td><strong><code>MapWritable</code></strong></td><td>表示一个可序列化的键值对映射，键和值需是 <code>Writable</code></td><td><code>Map&lt;Writable, Writable&gt;</code></td></tr><tr><td><strong><code>SortedMapWritable</code></strong></td><td>表示一个有序的键值对映射，键和值需是 <code>Writable</code></td><td><code>SortedMap&lt;Writable, Writable&gt;</code></td></tr></tbody></table><hr><h3 id="3-复合数据类型"><a href="#3-复合数据类型" class="headerlink" title="3. 复合数据类型"></a><strong>3. 复合数据类型</strong></h3><table><thead><tr><th>数据类型</th><th>描述</th><th>对应的 Java 类型</th></tr></thead><tbody><tr><td><strong><code>BytesWritable</code></strong></td><td>表示一个可序列化的字节数组</td><td><code>byte[]</code></td></tr><tr><td><strong><code>GenericWritable</code></strong></td><td>支持多种数据类型的通用序列化，继承后可自定义支持的类型</td><td>任何 <code>Writable</code> 类型</td></tr><tr><td><strong><code>TupleWritable</code></strong></td><td>表示一个可序列化的多字段元组，字段类型需是 <code>Writable</code></td><td><code>Writable[]</code></td></tr></tbody></table><hr><h3 id="4-特殊数据类型"><a href="#4-特殊数据类型" class="headerlink" title="4. 特殊数据类型"></a><strong>4. 特殊数据类型</strong></h3><table><thead><tr><th>数据类型</th><th>描述</th><th>对应的 Java 类型</th></tr></thead><tbody><tr><td><strong><code>NullWritable</code></strong></td><td>表示空值，通常用于不需要输出值或输入值的场景</td><td>无（表示空值）</td></tr></tbody></table><hr><h3 id="特点与使用场景"><a href="#特点与使用场景" class="headerlink" title="特点与使用场景"></a><strong>特点与使用场景</strong></h3><ol><li><strong>轻量级设计</strong>：Hadoop 的数据类型是轻量级的，可通过实现 <code>Writable</code> 接口高效进行序列化和反序列化。</li><li><strong>网络传输优化</strong>：这些类型是 Hadoop 原生支持的，经过优化以适应分布式系统中大量数据的网络传输需求。</li><li><strong>灵活组合</strong>：集合类如 <code>ArrayWritable</code> 和 <code>MapWritable</code> 允许用户灵活表示复杂的数据结构。</li></ol><hr><h3 id="实际应用示例"><a href="#实际应用示例" class="headerlink" title="实际应用示例"></a><strong>实际应用示例</strong></h3><ul><li><strong>单词计数任务</strong>：<ul><li>使用 <code>Text</code> 作为 Mapper 的输出键类型（单词）。</li><li>使用 <code>IntWritable</code> 作为 Mapper 的输出值类型（计数）。</li></ul></li><li><strong>组合键任务</strong>：<ul><li>使用 <code>MapWritable</code> 或 <code>ArrayWritable</code> 来存储多个字段信息。</li></ul></li></ul><p>Hadoop 的这些官方数据类型覆盖了大多数 MapReduce 应用场景，可以根据具体需求进行选择和扩展。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MapReduce </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL增删改查练习题</title>
       <link href="/2024/12/04/MySQL%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
       <url>/2024/12/04/MySQL%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E7%BB%83%E4%B9%A0%E9%A2%98/</url>
