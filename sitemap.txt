@@ -1,3 +1,4 @@
+https://blog.yexiaonan.fun/2024/12/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E7%94%A8%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87%E8%A1%A8/
 https://blog.yexiaonan.fun/2024/12/24/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E9%98%B6%E7%8E%A9%E6%B3%95/
 https://blog.yexiaonan.fun/2024/12/18/Flume%E9%85%8D%E7%BD%AEHDFS/
 https://blog.yexiaonan.fun/2024/12/13/%E6%88%91%E5%9C%A8%E5%93%AA%EF%BC%8C%E5%AE%B6%E5%B0%B1%E5%9C%A8%E5%93%AA/
@@ -107,6 +108,8 @@ https://blog.yexiaonan.fun/tags/Sqoop/
 https://blog.yexiaonan.fun/tags/MapReduce/
 https://blog.yexiaonan.fun/tags/%E9%9A%8F%E8%AE%B0/
 https://blog.yexiaonan.fun/tags/Flume/
+https://blog.yexiaonan.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/
+https://blog.yexiaonan.fun/tags/%E8%8B%B1%E8%AF%AD/
 https://blog.yexiaonan.fun/categories/Echarts-%E5%8F%AF%E8%A7%86%E5%8C%96/
 https://blog.yexiaonan.fun/categories/Hadoop-HDFS%E5%91%BD%E4%BB%A4%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/
 https://blog.yexiaonan.fun/categories/MySQL%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/
