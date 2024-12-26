@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>HadoopScript - Hadoop快速搭建脚本</title>
+      <link href="/2024/12/26/HadoopScript-Hadoop%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E8%84%9A%E6%9C%AC/"/>
+      <url>/2024/12/26/HadoopScript-Hadoop%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E8%84%9A%E6%9C%AC/</url>
+      
+        <content type="html"><![CDATA[<h1 id="HadoopScript"><a href="#HadoopScript" class="headerlink" title="HadoopScript"></a>HadoopScript</h1><blockquote><p>帮助您解放双手<br><br></p></blockquote><h2 id="这是什么❓"><a href="#这是什么❓" class="headerlink" title="这是什么❓"></a>这是什么❓</h2><ul><li>一个快速执行生成Hadoop集群的脚本，它可以方便你的Hadoop集群搭建工作，节省时间。</li><li>请注意！该脚本可能在执行的时候有点漫长，请耐心等待</li><li>脚本执行需要什么？<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">三台Linux主机系统，分别将其命名为 Master，Slave1，Slave2 然后确保三台机器处于同一个网段下，可以互相访问到彼此</span><br></pre></td></tr></table></figure></li><li>该脚本在执行的时候将会安装Jdk环境（jdk-8u212-linux-x64）与Hadoop环境（hadoop-3.1.3）</li></ul> <br><h2 id="如何使用🚀"><a href="#如何使用🚀" class="headerlink" title="如何使用🚀"></a>如何使用🚀</h2><ul><li>将软件包<a href="https://github.com/YEXIAONAN/HadoopScript/releases/download/v1.0/HadoopScript.tar.gz">下载</a>并上传至您的Hadoop集群中的Master（主机点中）将其解压</li><li><code>tar -zxvf HadoopScript.tar.gz -C 您的目录</code></li><li>进入解压完毕后的目录，赋予脚本执行权限<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入目录</span></span><br><span class="line"><span class="built_in">cd</span> hadoopScript</span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋予脚本权限</span></span><br><span class="line"><span class="built_in">chmod</span> +x init.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动脚本</span></span><br><span class="line"><span class="built_in">sudo</span> ./init.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安静等待</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hadoop </tag>
+            
+            <tag> Shell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机专用英语词汇表</title>
       <link href="/2024/12/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E7%94%A8%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87%E8%A1%A8/"/>
       <url>/2024/12/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E7%94%A8%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87%E8%A1%A8/</url>
