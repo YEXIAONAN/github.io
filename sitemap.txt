@@ -1,3 +1,4 @@
+https://blog.nanbuli.top/2024/10/12/Java%E5%9F%BA%E7%A1%80/
 https://blog.nanbuli.top/2025/01/02/PriorityQueue%E9%98%9F%E5%88%97/
 https://blog.nanbuli.top/2024/12/26/HadoopScript-Hadoop%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E8%84%9A%E6%9C%AC/
 https://blog.nanbuli.top/2024/12/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E7%94%A8%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87%E8%A1%A8/
@@ -7,7 +8,6 @@ https://blog.nanbuli.top/2024/12/13/%E6%88%91%E5%9C%A8%E5%93%AA%EF%BC%8C%E5%AE%B
 https://blog.nanbuli.top/2024/10/07/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/
 https://blog.nanbuli.top/2024/12/09/MapReduce%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/
 https://blog.nanbuli.top/2024/10/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/
-https://blog.nanbuli.top/2024/10/12/Java%E5%9F%BA%E7%A1%80/
 https://blog.nanbuli.top/2024/12/04/MySQL%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E7%BB%83%E4%B9%A0%E9%A2%98/
 https://blog.nanbuli.top/2024/12/03/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E6%8F%92%E5%85%A5/
 https://blog.nanbuli.top/2024/12/02/%E4%BD%9B%E7%A5%96%E4%BF%9D%E4%BD%91%EF%BC%8C%E6%B0%B8%E6%97%A0Bug%E6%B3%A8%E9%87%8A/
